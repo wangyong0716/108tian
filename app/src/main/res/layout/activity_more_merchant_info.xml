@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+    <com.ksider.mobile.android.scrollListView.OverScrollPagingListView
+            android:id="@+id/content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@color/transparent"
+            android:clipToPadding="false"
+            />
+    <LinearLayout
+            android:id="@+id/empty_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="116dp">
+        <ImageView
+                android:src="@drawable/loading_icon"
+                android:visibility="visible"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/no_storage_info1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black_1"
+                android:text="该商户暂无信息可供查阅！"/>
+        <TextView
+                android:id="@+id/no_storage_info2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black_1"
+                android:text=""/>
+    </LinearLayout>
+    <include  layout="@layout/init_loading_view"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="140dp"/>
+    <include layout="@layout/header_backtrack_transparent"/>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+    <include layout="@layout/header_backtrack_toolbar"/>
+    <com.ksider.mobile.android.view.LoadImageView
+            android:id="@+id/header_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:scaleType="centerCrop"
+            android:src="@color/image_default_color"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/header_banner_height"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <View style="@style/divider_line"/>
+        <WebView android:id="@+id/webview"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

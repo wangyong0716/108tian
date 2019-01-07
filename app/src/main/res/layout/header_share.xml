@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_banner"
+    android:layout_gravity="fill_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/header_banner_height" >
+
+    <RelativeLayout
+        android:id="@+id/list_backbutton"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/margin_left_standard"
+        android:clickable="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/backbutton_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/share_icon"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:clickable="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/share_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/collect_area"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/margin_right_standard"
+        android:layout_toLeftOf="@id/share_icon"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_top_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/collect"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/collect_icon" />
+
+            <ImageView
+                android:id="@+id/collected"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/collected_icon"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="-4dp"
+            android:id="@+id/collection_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small_size" >
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/white" />
+
+    <size
+        android:height="@dimen/guide_circle_diameter"
+        android:width="@dimen/guide_circle_diameter" />
+    <solid android:color="@color/transparent"/>
+
+</shape>

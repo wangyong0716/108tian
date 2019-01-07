@@ -1,0 +1,36 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/frameLayout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+	<com.ksider.mobile.android.view.ResponsiveScrollView
+	    android:id="@+id/scrollView"
+    	android:layout_width="match_parent"
+    	android:orientation="vertical"
+    	custom:headerHeight="@dimen/header_image_height"
+    	custom:scrollZoomView="@layout/header_zoom_image_view"
+        custom:scrollContentView="@layout/content_detail_fragment"
+        android:layout_marginBottom="@dimen/bottom_button_height"
+    	android:layout_height="wrap_content" />
+    <include layout="@layout/header_share_toolbar"/>
+    <include  layout="@layout/init_loading_view"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="140dp"/>
+    <include layout="@layout/price_bottom_bar"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/bottom_button_height"
+             android:layout_alignParentBottom="true"/>
+    <ViewStub
+        android:id="@+id/shareStub"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:inflatedId="@+id/subTree"
+        android:layout="@layout/share_layout" />
+</RelativeLayout>

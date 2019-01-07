@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="163dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/male"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center"
+        android:background="@color/white"
+    
+        android:text="@string/user_center_gender_male"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/text_middle_size" />
+
+    <View android:layout_width="match_parent"
+          android:background="@drawable/divider"
+          android:layout_height="0.5dp"/>
+
+    <TextView
+        android:id="@+id/female"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/user_center_gender_female"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/text_middle_size" />
+
+</LinearLayout>

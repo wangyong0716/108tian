@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|right"
+        android:paddingBottom="16dp"
+        android:id="@+id/refund_check"
+        android:layout_weight="1.0"
+        android:textColor="@color/label_color"
+        android:textSize="@dimen/text_middle_size"
+        style="@style/pay_label"
+        android:button="@null"
+        android:drawableLeft="@drawable/rb_backgroud"
+        android:layout_alignParentRight="true"
+        android:drawablePadding="13dp"
+        android:checked="true"/>

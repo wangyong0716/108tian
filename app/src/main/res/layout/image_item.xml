@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Expecting to be merged into a RelativeLayout. -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+	<com.ksider.mobile.android.view.LoadImageView
+    	android:id="@+id/header_image"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:scaleType="centerCrop"
+    	android:src="@color/image_default_color" />
+</merge>

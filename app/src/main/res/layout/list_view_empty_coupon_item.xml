@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="50dp"
+        android:gravity="center|left"
+        android:textColor="@color/black_1">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="暂时没有可使用的优惠券～"
+            android:gravity="center_vertical|left"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/partion_content_text_size"
+            />
+</RelativeLayout>

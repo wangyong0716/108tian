@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:clipChildren="false">
+
+
+<RelativeLayout
+        android:id="@+id/image_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/crop__bar_height"
+        android:clipChildren="false">
+
+        <com.ksider.mobile.android.crop.ChangeableImageView
+                android:id="@+id/show_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="matrix"
+                android:background="@android:color/transparent"
+                />
+
+        <com.ksider.mobile.android.crop.CropImageView
+                android:id="@+id/crop_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                 />
+</RelativeLayout>
+<include
+        android:id="@+id/done_cancel_bar"
+        layout="@layout/crop__layout_done_cancel" />
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolBar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetEnd="0dp"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    style="@style/toolbar_style"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+                android:id="@+id/list_backbutton"
+                style="@style/toolbar_back_icon"/>
+
+        <TextView
+                android:id="@+id/list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/default_list_tile"
+                android:layout_gravity="center"
+                android:textColor="@color/toolbar_text_color"
+                android:textSize="@dimen/list_title_size"
+                android:typeface="sans"/>
+        <ImageView
+                android:id="@+id/filter_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="16dp"
+                android:src="@drawable/filter_icon"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/filter_icon"
+                android:layout_alignBottom="@id/filter_icon"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="16dp"
+                android:src="@drawable/filter_triangle_icon"/>
+            <View style="@style/toolbar_line"/>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

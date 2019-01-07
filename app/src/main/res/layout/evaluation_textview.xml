@@ -1,0 +1,11 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/evaluation_item_height"
+        android:minHeight="@dimen/evaluation_item_height"
+        android:minWidth="@dimen/evaluation_item_height"
+        android:background="@drawable/evaluation_textview_background"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:textColor="@color/evaluation_score_gray"
+        android:textSize="@dimen/evaluate_score_textsize_small"/>

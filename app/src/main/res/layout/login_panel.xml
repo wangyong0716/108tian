@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_panel"
+    android:background="@color/homebackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true"
+	    android:orientation="vertical"
+	    android:paddingBottom="40dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:text="您还没有登录"
+        android:textColor="@color/tab_title_color"
+        android:textSize="14sp"
+        android:typeface="sans" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:text="登陆可收藏关注的地点"
+        android:textColor="@color/tab_title_color"
+        android:textSize="14sp"
+        android:typeface="sans" />
+  <Button
+      android:id="@+id/login"
+      android:layout_width="200dp"
+      android:layout_height="35dp"
+      android:layout_marginTop="25dp"
+      android:background="@color/main_color"
+      android:layout_gravity="center"
+      android:text="立即登录"
+      android:textColor="@color/white"
+      android:textSize="16sp" />
+  </LinearLayout>
+
+</RelativeLayout>

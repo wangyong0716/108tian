@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+    <com.ksider.mobile.android.scrollListView.OverScrollPullToRefreshListView
+            android:id="@+id/content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@color/transparent"
+            android:divider="@drawable/divider_personal_info"
+            android:clipToPadding="false"
+            android:footerDividersEnabled="false"/>
+    <com.ksider.mobile.android.view.paging.EmptyView
+            android:id="@+id/list_empty_view"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</RelativeLayout>

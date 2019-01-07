@@ -1,0 +1,21 @@
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+    <com.ksider.mobile.android.view.paging.gridview.PagingGridView
+            android:id="@+id/choiceness_list"
+            android:background="@color/white"
+            android:horizontalSpacing="12dp"
+            android:verticalSpacing="0dp"
+            android:paddingBottom="50dp"
+            android:paddingTop="@dimen/detail_toolbar_height"
+            android:listSelector="@color/transparent"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2" />
+        <include layout="@layout/header_title"/>
+</FrameLayout>
+

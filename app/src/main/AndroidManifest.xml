@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ksider.mobile.android.WebView"
+          android:versionCode="43"
+          android:versionName="4.4.9">
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-feature android:name="android.hardware.camera"
+                  android:required="true"/>
+
+    <application
+        android:name="com.ksider.mobile.android.MainApplication"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:screenOrientation="landscape">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="c41de531782a7fd3e777688b15246cf9"/>
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="81c7b15263"/>
+        <!-- 测试key -->
+        <!--
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="GlhZoyfKsQNWPr0syNN6tLGf" />
+        -->
+        <!-- 线上key -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="7u8A3TQCvGolqZfziyXiAGYX"/>
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="108tian_channel"/>
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true"/>
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="SET_TIME_INTERVAL"/>
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="false"/>
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true"/>
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true"/>
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true"/>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="54465e69fd98c5c2f600521f"/>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="5a6c8933cfab1ce6b5125210e68ec921">
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="umeng_108tian"/>
+        <!-- 友盟推荐配置 -->
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false">
+        </receiver>
+        <receiver android:name="com.umeng.message.RegistrationReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.ksider.mobile.android.WebView.intent.action.COMMAND"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RE_ELECTION_V2"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.umeng.message.UmengService"
+            android:exported="true"
+            android:process=":umengService_v1">
+            <intent-filter>
+                <action android:name="com.ksider.mobile.android.WebView.intent.action.START"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.ksider.mobile.android.WebView.intent.action.COCKROACH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="org.android.agoo.service.ElectionService"
+            android:exported="true"
+            android:process=":umengService_v1">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_V2"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.umeng.message.UmengIntentService"/>
+        <!-- V1.3.0添加的service，负责下载通知的资源 -->
+        <service android:name="com.umeng.message.UmengDownloadResourceService"/>
+        <!-- 友盟推荐配置结束！ -->
+
+        <service android:name="com.ksider.mobile.android.service.LocalService"
+                 android:persistent="true"
+                 android:process=":push"
+                 android:priority="1000"/>
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent"
+            android:launchMode="singleTop">
+        </activity>
+        <!--<activity-->
+        <!--android:name="com.ksider.mobile.android.test.MainActivity"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:theme="@style/TranslucentTheme"-->
+        <!-->-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity android:name="com.ksider.mobile.android.test.SecondActivity"-->
+        <!--android:label="SecondActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/TranslucentTheme"-->
+        <!--/>-->
+
+        <!--<activity-->
+        <!--android:name="com.ksider.mobile.android.test.TestActivity"-->
+        <!--android:hardwareAccelerated="true"-->
+        <!--android:label="@string/app_name">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN"/>-->
+        <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity-->
+        <!--android:name="com.ksider.mobile.android.test.TestActivity01"-->
+        <!--android:hardwareAccelerated="true"-->
+        <!--android:label="@string/app_name">-->
+        <!--</activity>-->
+        <activity
+            android:name=".CitySelectedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name=".PurchaseAcitvity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/actionBarDefaultStyle">
+            <!--intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter-->
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarDefaultStyle"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!--<data android:scheme="tencent841857698"/>-->
+                <data android:scheme="tencent1102004980"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.connect.avatar.ImageActivity"/>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".TrafficInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Styled">
+        </activity>
+        <activity
+            android:name=".TrafficMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Styled">
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentTheme">
+            <!--<intent-filter>-->
+            <!--<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>-->
+            <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name=".SingleListActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name=".ChoicenessActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+        </service>
+
+        <activity
+            android:name=".SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarDefaultStyle"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
+        </activity>
+        <activity
+            android:name=".SearchResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name=".PushLangdingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible">
+        </activity>
+        <activity
+            android:theme="@style/actionBarDefaultStyle"
+            android:name=".WebViewLandingActivity"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+            <!--<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>-->
+            <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--</intent-filter>-->
+        </activity>
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService">
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"/>
+
+        <activity
+            android:name=".EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".SchemaSupportActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="ksider"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="m.108tian.com"
+                    android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.crop.CropImageActivity">
+        </activity>
+        <activity
+            android:name=".StorageListActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.OrdersListActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.ConsumeCodeListActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.OrderDetailActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.OrderActivity"
+            android:theme="@style/StyledIndicators">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.StorageActivity"
+            android:theme="@style/StyledIndicators">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.WebView.ThemeListActivity"
+            android:theme="@style/StyledIndicators">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.CouponActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.ChooseCouponActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.MessageListActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.ConsultListActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.WebView.RefundActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.WebView.CheckFeedBackActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.WebView.FeedBackActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity android:name=".PicsViewActivity"
+                  android:theme="@android:style/Theme.Black.NoTitleBar">
+        </activity>
+        <activity android:name=".MoreDetailInfoActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity android:name=".MoreMerchantInfoActivity"
+                  android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name=".SelectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.ScoreListActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.EvaluateActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <activity
+            android:name="com.ksider.mobile.android.personal.MerchantScoreActivity"
+            android:theme="@style/actionBarDefaultStyle">
+        </activity>
+        <receiver
+            android:name=".wxapi.AppRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <activity android:name="com.ksider.mobile.android.WebView.wxapi.WeiboCallBack"
+                  android:configChanges="keyboardHidden|orientation"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginLeft="@dimen/list_item_margin_left"
+    android:layout_marginRight="@dimen/list_item_margin_right"
+    android:layout_marginTop="@dimen/list_item_margin_top"
+    android:orientation="vertical" >
+
+    <com.ksider.mobile.android.view.LoadImageView
+        android:id="@+id/listview_headImage"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/image_default_color" />
+    <!-- location  -->
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_floating_mask_height"
+        android:background="@drawable/mask_layer"
+        android:layout_gravity="bottom">
+
+    	<RelativeLayout
+    	    android:layout_width="match_parent"
+    	    android:layout_height="@dimen/list_item_floating_height"
+    	    android:layout_alignParentBottom="true"
+    	    android:layout_gravity="bottom"
+    	    android:layout_marginBottom="@dimen/home_section_divider_line_height"
+    	    android:layout_marginLeft="@dimen/list_item_floating_margin_left"
+    	    android:layout_marginRight="@dimen/list_item_floating_margin_right" >
+
+        <TextView
+            android:id="@+id/list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/list_title_size"
+            android:typeface="sans" />
+
+    	</RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/search_city_layout"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:layout_height="@dimen/city_search_top_height">
+    <EditText android:id="@+id/search_city_edittext"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/city_search_edittext_height"
+              android:layout_centerVertical="true"
+              android:gravity="left|center_vertical"
+              android:background="@drawable/bg_gray_rectangle"
+              android:singleLine="true"
+              android:drawableLeft="@drawable/search_small_icon"
+              android:paddingLeft="8dp"
+              android:drawablePadding="5dp"
+              android:textColor="@color/black_0"
+              android:textColorHint="@color/black_1"
+              android:textSize="12sp"
+              android:hint="@string/select_city_hint"/>
+
+    <ImageView android:id="@+id/delete_image"
+               android:visibility="invisible"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_alignParentRight="true"
+               android:scaleType="centerInside"
+               android:src="@drawable/delete"
+               android:layout_centerInParent="true"
+               android:paddingRight="12dp"
+            />
+</RelativeLayout>

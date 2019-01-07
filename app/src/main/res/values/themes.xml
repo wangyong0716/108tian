@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Styled" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="actionBarStyle">@style/Widget.AppCompat.Light.ActionBar</item>
+        <item name="android:actionBarStyle">@style/Widget.AppCompat.Light.ActionBar</item>
+    </style>
+
+    <style name="Widget.Styled.ActionBar" parent="android:style/Widget.ActionBar">
+        <item name="android:titleTextStyle">@style/ActionBarTitleText</item>
+        <item name="android:background">@null</item>
+        <item name="android:displayOptions">homeAsUp|showHome|showTitle</item>
+    </style>
+
+    <style name="ActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:text">@string/default_list_tile</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/list_title_size</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="ShareDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:background">@color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 蒙版- 模糊 -->
+    </style>
+
+    <style name="TransparentTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle.Transparent</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:alertDialogStyle">@style/CustomDialog</item>
+    </style>
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/main_color</item>
+        <item name="android:windowTitleStyle">@style/CustomDialogTitle</item>
+        <item name="listPreferredItemPaddingLeft">5dip</item>
+        <item name="listPreferredItemPaddingRight">5dip</item>
+    </style>
+
+    <style name="CustomDialogTitle" parent="@android:style/TextAppearance.DialogWindowTitle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ActionBarStyle.Transparent" parent="@android:style/Widget.ActionBar">
+        <item name="android:background">@null</item>
+        <item name="android:height">@dimen/header_banner_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:displayOptions">homeAsUp|showHome|showTitle</item>
+        <item name="android:titleTextStyle">@style/ActionBarStyle.Transparent.TitleTextStyle</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="ActionBarStyle.Transparent.TitleTextStyle"
+           parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--<style name="CustomTheme" parent="@android:style/Theme.DeviceDefault.Light">-->
+        <!--<item name="android:windowBackground">@null</item>-->
+        <!--<item name="android:actionOverflowButtonStyle">@style/CustomActionButtonOverflow</item>-->
+        <!--<item name="android:actionBarStyle">@style/CustomActionBar</item>-->
+        <!--<item name="android:windowActionBarOverlay">true</item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+    <!--</style>-->
+
+    <style name="CustomActionButtonOverflow"
+           parent="@android:style/Widget.DeviceDefault.Light.ActionButton.Overflow"></style>
+
+    <style name="CustomActionBar" parent="@android:style/Widget.DeviceDefault.Light.ActionBar">
+        <item name="android:background">@color/tab_background_color</item>
+        <item name="android:backgroundSplit">@color/tab_background_color</item>
+    </style>
+
+    <style name="defaultTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--<style name="actionBarDefaultStyle" parent="@style/Theme.AppCompat.Light.DarkActionBar"/>-->
+    <style name="actionBarDefaultStyle" parent="@style/Theme.AppCompat.NoActionBar">
+        <!--<item name="android:windowAnimationStyle">@style/AlphaDegreeActivity</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:launchMode">singleTop</item>
+        <item name="android:editTextStyle">@style/defaultTextStyle</item>
+    </style>
+
+    <style name="homePageRecommendTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_middle_size</item>
+        <item name="android:textColor">@color/black_1</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <!--<item name="android:textStyle">bold</item>-->
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="homePageRecommendDesStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_tiny_size</item>
+        <item name="android:textColor">@color/black_1</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="homePageRecommendImageStyle">
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="homePageRecommendImageStyle1">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/home_page_recommend_test_icon</item>
+        <item name="cover">true</item>
+        <item name="cover_width">40dp</item>
+        <item name="cover_color">#60fb695c</item>
+        <item name="dashed">true</item>
+        <item name="dash_distance">5dp</item>
+        <item name="dash_width">1.5dp</item>
+        <item name="dash_color">@color/white</item>
+    </style>
+
+    <style name="homePageRecommendInnerLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="homePageRecommendMiddleLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_gray_rectangle_5</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:paddingRight">7dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="homePageRecommendOuterLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:weightSum">2</item>
+        <item name="android:divider">@drawable/divider_recommend</item>
+        <item name="android:showDividers">middle</item>
+    </style>
+
+    <style name="productDetailRelativeLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/detail_page_card_margin_left</item>
+        <item name="android:paddingRight">@dimen/detail_page_card_margin_right</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="productDetailLinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">19dp</item>
+        <item name="android:paddingTop">22dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/detail_padding_left</item>
+        <item name="android:paddingRight">@dimen/detail_padding_right</item>
+        <item name="android:background">@drawable/detail_activity_back_frame</item>
+    </style>
+    <style name="productDetailTitleLabelStyle">
+        <item name="android:layout_width">99dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/bg_detail_titlle_label</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+</resources>

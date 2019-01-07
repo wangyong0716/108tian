@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="tabview_background_pressed">#6633B5E5</color>
+    <color name="main_color">#0CC7B4</color>
+    <color name="main_translucent_color">#E90CC7B4</color>
+    <color name="homebackground">#EBEBEB</color>
+    <color name="translucent_white">#CCFFFFFF</color>
+
+    <color name="gray">#E5E5E5</color>
+    <color name="gray_selected">#E1E1E1</color>
+    <color name="translucent_gray">#EFE5E5E5</color>
+    <color name="gray_tile">#666666</color>
+    <color name="tab_background_color">#E5F5F5F5</color>
+    <color name="tab_title_color">#999999</color>
+    <color name="tabhost_title_color">#999999</color>
+    <color name="image_default_color">#DDDDDD</color>
+    <color name="color_black">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_gray_lite">#F6F6F4</color>
+    <color name="color_gray_light">#99C9C9C9</color>
+    <color name="color_black_light">#99000000</color>
+    <color name="transparent">#00000000</color>
+    <!-- 新版配置 -->
+    <color name="float_color">#4C000000</color>
+    <color name="main_blue_color">#0CC7B4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_1">#f7f7f7</color>
+    <color name="white_half_transparent">#7FFFFFFF</color>
+    <color name="red_transparent">#B2ED4255</color>
+    <color name="blue_transparent">#B250BBB6</color>
+    <color name="green_transparent">#B283ECB8</color>
+    <color name="yellow_transparent">#B2FBB64A</color>
+    <color name="yellow_price">#F6840B</color>
+    <color name="orange">#F6840B</color>
+    <color name="red">#ED4255</color>
+    <color name="blue">#52A9FF</color>
+    <color name="green">#83ECB8</color>
+    <color name="violet">#B67EFD</color>
+    <color name="magenta">#F86E66</color>
+    <color name="yellow">#F9D84D</color>
+    <color name="pink">#F85D8C</color>
+    <color name="olivegreen">#3CD56C</color>
+    <color name="black">#5e5e5e</color>
+    <color name="black_0">#000000</color>
+    <color name="black_1">#838584</color>
+    <color name="black_2">#7d7d7d</color>
+    <color name="black_3">#828282</color>
+    <color name="black_4">#aeaeae</color>
+    <color name="black_5">#7f7f7f</color>
+    <color name="gray_0">#F8F8F8</color>
+    <color name="gray_1">#999999</color>
+    <color name="gray_2">#eaeaea</color>
+    <color name="gray_3">#cecece</color>
+
+    <!--<color name="divider_line_color">#dbdbdb</color>-->
+    <color name="divider_line_color">#c5c5c5</color>
+    <color name="navigation_line_color">#7d7d7d</color>
+    <color name="divider_block_color">#EEEEEE</color>
+    <color name="detail_title_color">#343434</color>
+
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+    <color name="order_state_unpay">#5eeea5</color>
+
+    <color name="highlight">#f3f3f3</color>
+
+    <color name="trash_background">#ffb94b</color>
+    <color name="highlight_yellow">#F6840B</color>
+    <color name="submit_click_color">#2DAA99</color>
+
+    <color name="coupon_number_yellow">#ffdc01</color>
+
+    <color name="apply_refund_text_color">#f4fd00</color>
+    <color name="green_0">#61ed8a</color>
+    <color name="divider">#D7D7D7</color>
+    <color name="divider_personal_info">#eeeeee</color>
+    <color name="participate_background_color">#ffb94b</color>
+
+    <color name="title_color">#494949</color>
+    <color name="label_color">#0b1e30</color>
+    <color name="content_color">#7d7d7d</color>
+    <color name="hint_color">#bbbbbb</color>
+
+    <color name="main_red">#ff475b</color>
+    <color name="main_yellow">#ffb94b</color>
+    <color name="main_light_green">#5eeea6</color>
+    <color name="main_dark_green">#02cab6</color>
+
+    <color name="toolbar_background_color">#FFFFFE</color>
+    <color name="toolbar_text_color">#0b1e30</color>
+
+    <color name="personal_info_text_color">#7d7d7d</color>
+    <color name="personal_info_text_color_selected">#0CC7B4</color>
+    <color name="login_avatar_circle_color">#e6f9f7</color>
+    <color name="order_detail_coupon_text_color">#ff485c</color>
+    <color name="coupon_consumed_text_color">#494949</color>
+
+    <color name="calendar_text_color_weekend">#ff475b</color>
+    <color name="calendar_text_color_normal">#000000</color>
+
+    <color name="dialog_translucent_color">#E9ffffff</color>
+
+    <color name="selector_text_color">#7d7d7d</color>
+    <color name="transparent_black">#80000000</color>
+    <color name="calendar_default_money_color">#666666</color>
+
+    <color name="subject_title_default_color_1">#fb695c</color>
+    <color name="subject_title_default_color_2">#8ed740</color>
+    <color name="subject_title_default_color_3">#4ea9ff</color>
+    <color name="subject_title_default_color_4">#ffba4b</color>
+
+    <color name="evaluation_score_red">#ff485c</color>
+    <color name="evaluation_score_gray">#7d7d7d</color>
+    <color name="evaluation_score_black">#333333</color>
+    <color name="evaluation_score_blue">#00cab6</color>
+    <color name="evaluation_item_unselect_border_color">#cccccc</color>
+    <color name="evaluation_item_selected_border_color">#fd8307</color>
+    <color name="evaluation_item_selected_back_color">#fefaf4</color>
+
+    <color name="detail_divider_color">#eeeeee</color>
+    <color name="detail_activity_border_color">#dedede</color>
+</resources>

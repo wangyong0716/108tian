@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/bg_cornered_disabled" />
+
+    <item>
+        <shape>
+            <solid android:color="@color/submit_click_color" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ksider.mobile.android.scrollListView.OverScrollPullToRefreshListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/content_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@color/transparent"
+        android:paddingBottom="55dp"
+        android:clipToPadding="false"/>

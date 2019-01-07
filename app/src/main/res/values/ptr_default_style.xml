@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ptr_headerContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0px</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+    
+    <style name="ptr_header">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    
+    <style name="ptr_arrow">
+        <item name="android:layout_width">32dip</item>
+        <item name="android:layout_height">32dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:src">@drawable/loading_icon</item>
+    </style>
+    
+    <style name="ptr_spinner" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">32dip</item>
+        <item name="android:maxWidth">32dip</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:indeterminateDrawable">@drawable/loading</item>
+    </style>
+
+    <style name="ptr_textwrapper">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ptr_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/text_tiny_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black_1</item>
+    </style>
+    
+    <style name="ptr_last_updated" parent="ptr_text">
+        <item name="android:textStyle">normal</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:layout_below">@+id/ptr_id_text</item>
+    </style>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/filter_gridview_item_height">
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/filter_gridview_item_height"
+        android:drawablePadding="0dp"
+        android:gravity="center|top"
+        android:textColor="@color/black_0"
+        android:textSize="@dimen/text_middle_size" >
+    </TextView>
+
+</RelativeLayout>

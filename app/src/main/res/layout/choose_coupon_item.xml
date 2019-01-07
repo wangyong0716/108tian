@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="50dp"
+        android:gravity="center_vertical|left"
+        android:id="@+id/refund_check"
+        android:layout_weight="1.0"
+        android:textColor="@color/content_color"
+        android:textSize="@dimen/partion_content_text_size"
+        android:button="@null"
+        android:drawableRight="@drawable/rb_backgroud"
+        android:drawablePadding="13dp"
+        android:text="满100元可用 立减30元"/>

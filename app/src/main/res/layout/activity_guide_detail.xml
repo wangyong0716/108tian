@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/framaa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+    <com.ksider.mobile.android.view.ResponsiveScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:headerHeight="@dimen/header_image_height"
+            custom:scrollContentView="@layout/content_detail_fragment"
+            custom:scrollZoomView="@layout/header_zoom_image_view"/>
+    <include layout="@layout/header_share_toolbar"/>
+    <include layout="@layout/init_loading_view"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="140dp"/>
+    <ViewStub
+            android:id="@+id/shareStub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:inflatedId="@+id/subTree"
+            android:layout="@layout/share_layout"/>
+
+</RelativeLayout>

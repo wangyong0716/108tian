@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clipChildren="false"
+                android:orientation="vertical">
+    <com.ksider.mobile.android.scrollListView.OverScrollPullToRefreshListView
+            android:id="@+id/content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@color/transparent"
+            android:paddingBottom="55dp"
+            android:paddingTop="@dimen/header_banner_height"
+            android:clipToPadding="false"
+            android:background="@color/white"
+            android:clipChildren="false"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/transparent"/>
+    <include layout="@layout/header_city_selected"/>
+</RelativeLayout>

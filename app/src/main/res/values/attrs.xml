@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PullToZoomScrollView">
+        <attr name="scrollHeadView" format="reference"/>
+        <attr name="scrollContentView" format="reference"/>
+        <attr name="scrollZoomView" format="reference"/>
+        <attr name="headerHeight" format="dimension"/>
+        <attr name="headerWidth" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="PullToZoomListView">
+        <attr name="listHeadView" format="reference"/>
+        <attr name="isHeadParallax" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color"/>
+        <attr name="pstsUnderlineColor" format="color"/>
+        <attr name="pstsDividerColor" format="color"/>
+        <attr name="pstsIndicatorHeight" format="dimension"/>
+        <attr name="pstsUnderlineHeight" format="dimension"/>
+        <attr name="pstsDividerPadding" format="dimension"/>
+        <attr name="pstsTabPaddingLeftRight" format="dimension"/>
+        <attr name="pstsScrollOffset" format="dimension"/>
+        <attr name="pstsTabBackground" format="reference"/>
+        <attr name="pstsShouldExpand" format="boolean"/>
+        <attr name="pstsTextAllCaps" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="CustomerViewPaper">
+        <attr name="scrollEnable" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="TabState">
+        <attr name="state_tab_selected" format="boolean"/>
+    </declare-styleable>
+
+    <!-- CircularImageView for custom shape -->
+    <declare-styleable name="CircularImageView">
+
+        <!-- Specifies whether or not to draw a circular border around the image. -->
+        <attr name="border" format="boolean"></attr>
+        <!-- Specifies the color of the border draw around the image. (if enabled) -->
+        <attr name="border_color" format="reference|color"></attr>
+        <!-- Makes the border this pixels wide. (if enabled) -->
+        <attr name="border_width" format="reference|dimension"></attr>
+        <!-- Specifies whether or not to draw a selector on this view upon touch events. -->
+        <attr name="selector" format="boolean"></attr>
+        <!-- Specifies the color of the selector draw on top of the image upon touch events. (if enabled) -->
+        <attr name="selector_color" format="reference|color"></attr>
+        <!-- Specifies the color of the selector stroke drawn around the image upon touch events. Be sure to provide some opacity. (if enabled) -->
+        <attr name="selector_stroke_color" format="reference|color"></attr>
+        <!-- Makes the selector stroke drawn around the image upon touch events this pixels wide. (if enabled) -->
+        <attr name="selector_stroke_width" format="reference|dimension"></attr>
+        <!-- Specifies whether or not to draw a shadow around your circular image. -->
+        <attr name="shadow" format="boolean"></attr>
+        <attr name="shadow_color" format="color"></attr>
+        <!-- Specifies graph type:circlr or round rectangle. -->
+        <attr name="graph_type" format="enum">
+            <enum name="oval" value="0"/>
+            <enum name="rectangle" value="1"/>
+        </attr>
+        <!-- Makes the radius this pixels wide of rectangle. (if rectangle) -->
+        <attr name="corner_radius_x" format="reference|dimension"/>
+        <!-- Makes the radius this pixels wide of rectangle. (if rectangle) -->
+        <attr name="corner_radius_y" format="reference|dimension"/>
+        <!-- Specifies whether or not to draw a cover in your graph. -->
+        <attr name="cover" format="boolean"/>
+        <!-- Makes  pixels wide of cover. (if rectangle) -->
+        <attr name="cover_width" format="reference|dimension"/>
+        <!--Specifies the color of cover-->
+        <attr name="cover_color" format="reference|color"/>
+        <!-- Specifies whether or not to draw a dashed line in your graph. -->
+        <attr name="dashed" format="boolean"/>
+        <!-- Makes  pixels distance between dash and edge of the image. (if rectangle) -->
+        <attr name="dash_distance" format="reference|dimension"/>
+        <!--Specifies the color of dash-->
+        <attr name="dash_color" format="reference|color"/>
+        <attr name="dash_width" format="reference|dimension"/>
+        <attr name="dash_line_length" format="float"/>
+        <attr name="dash_blank_length" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="CustomCircularImageViewTheme">
+        <attr name="circularImageViewStyle" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="RoundedImageView">
+        <attr name="corner_radius" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="Triangle">
+        <attr name="draw_color" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="PhasedSeekBar">
+        <attr name="phased_mode">
+            <enum name="horizontal" value="1"/>
+            <enum name="vertical" value="2"/>
+        </attr>
+        <attr name="phased_base_margin_left" format="dimension|reference"/>
+        <attr name="phased_base_margin_right" format="dimension|reference"/>
+        <attr name="phased_base_margin_top" format="dimension|reference"/>
+        <attr name="phased_base_margin_bottom" format="dimension|reference"/>
+        <attr name="phased_item_width" format="dimension|reference"/>
+        <attr name="phased_item_height" format="dimension|reference"/>
+        <attr name="phased_anchor_width" format="dimension|reference"/>
+        <attr name="phased_anchor_height" format="dimension|reference"/>
+        <attr name="phased_draw_on_off" format="boolean"/>
+        <attr name="phased_fix_point" format="boolean"/>
+        <attr name="phased_base_background" format="color|reference"/>
+        <attr name="phased_base_cursor" format="color|reference"/>
+    </declare-styleable>
+    <declare-styleable name="CropImageView">
+        <attr name="cropImageStyle" format="reference"/>
+        <attr name="highlightColor" format="reference|color"/>
+        <attr name="showThirds" format="boolean"/>
+        <attr name="showCircle" format="boolean"/>
+        <attr name="showHandles">
+            <enum name="changing" value="0"/>
+            <enum name="always" value="1"/>
+            <enum name="never" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MaterialCalendarView">
+
+        <attr name="mcv_dateTextAppearance" format="reference"/>
+        <attr name="mcv_weekDayTextAppearance" format="reference"/>
+        <attr name="mcv_headerTextAppearance" format="reference"/>
+
+        <attr name="mcv_arrowColor" format="color"/>
+        <attr name="mcv_selectionColor" format="color"/>
+
+        <attr name="mcv_showOtherDates" format="boolean"/>
+
+        <attr name="mcv_weekDayLabels" format="reference"/>
+        <attr name="mcv_monthLabels" format="reference"/>
+
+        <attr name="mcv_tileSize" format="dimension"/>
+
+        <attr name="mcv_firstDayOfWeek" format="enum">
+            <enum name="sunday" value="1"/>
+            <enum name="monday" value="2"/>
+            <enum name="tuesday" value="3"/>
+            <enum name="wednesday" value="4"/>
+            <enum name="thursday" value="5"/>
+            <enum name="friday" value="6"/>
+            <enum name="saturday" value="7"/>
+        </attr>
+        <attr name="mcv_border_lines" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="AlignTextView">
+        <attr name="textSize" format="reference|dimension"/>
+        <attr name="textColor" format="reference|color"/>
+        <attr name="lineSpacingExtra" format="reference|dimension"/>
+        <attr name="paddingTop" format="reference|dimension"/>
+        <attr name="paddingBottom" format="reference|dimension"/>
+        <attr name="paddingLeft" format="reference|dimension"/>
+        <attr name="paddingRight" format="reference|dimension"/>
+        <attr name="marginTop" format="reference|dimension"/>
+        <attr name="marginBottom" format="reference|dimension"/>
+        <attr name="marginLeft" format="reference|dimension"/>
+        <attr name="marginRight" format="reference|dimension"/>
+        <attr name="typeface" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="sans" value="1"/>
+            <enum name="serif" value="2"/>
+            <enum name="monospace" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RotationAnim">
+        <attr name="test" format="integer"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="AutoLayout">
+        <attr name="row_min" format="integer"/>
+        <attr name="row_max" format="integer"/>
+        <attr name="max_row" format="integer"/>
+        <attr name="divider_width" format="reference|dimension"/>
+        <attr name="divider_height" format="reference|dimension"/>
+        <attr name="horizontal_margin" format="reference|dimension"/>
+        <attr name="item_height" format="reference|dimension"/>
+    </declare-styleable>
+</resources>

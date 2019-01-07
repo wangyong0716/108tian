@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_top_standard"
+    android:background="@color/homebackground" >
+
+    <LinearLayout
+        android:id="@+id/order_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_list_card_style"
+        android:divider="@drawable/divider"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:showDividers="middle" >
+        <!-- 标题、单价 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/order_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sku_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textColor="@color/main_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/unit_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/black_1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- 类型和数量，根据单子性质不同，显示不同,在代码里面添加 -->
+
+        <LinearLayout
+            android:id="@+id/deal_num_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/pay_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="5"
+                android:text="@string/buy_num_lab" />
+
+            <com.ksider.mobile.android.activity.fragment.buy.GoodsNumCountView
+                android:id="@+id/goods_num_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="right" />
+        </LinearLayout>
+
+        <!-- 总价 -->
+
+        <include layout="@layout/layout_subtotal" />
+
+
+    </LinearLayout>
+    <!-- 提交生成订单 -->
+
+
+</RelativeLayout>

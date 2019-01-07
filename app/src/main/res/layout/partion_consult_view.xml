@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/partion_padding_bottom"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+        <include layout="@layout/title_view"/>
+        <TextView
+                android:id="@+id/more"
+                android:visibility="invisible"
+                android:layout_width="53dp"
+                android:layout_height="18dp"
+                android:gravity="center_vertical|right"
+                android:text="more"
+                android:textColor="@color/main_color"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="5dp"
+                android:paddingBottom="3dp"
+                android:drawableRight="@drawable/more_triangle_icon"
+                android:drawablePadding="3dp"
+                android:background="@drawable/bg_cornered_rectangle_more_consult"
+                android:textSize="12sp"/>
+    </RelativeLayout>
+    <TextView
+            android:id="@+id/no_consult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/content_color"
+            android:textSize="@dimen/partion_content_text_size"
+            android:layout_marginTop="@dimen/partion_margin_title"
+            android:layout_marginBottom="9dp"
+            android:gravity="center"
+            android:text="@string/no_consult_tips"
+            android:visibility="gone"/>
+    <LinearLayout
+            android:id="@+id/consult_container"
+            android:layout_marginTop="@dimen/partion_margin_title"
+            android:background="@color/white"
+            style="@style/card_container_style"/>
+    <TextView
+            android:id="@+id/consult"
+            android:layout_width="@dimen/more_frame_width"
+            android:layout_height="@dimen/more_frame_height"
+            android:textColor="@color/main_color"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textSize="@dimen/partion_more_text_size"
+            android:layout_marginTop="@dimen/partion_margin_content"
+            android:background="@drawable/bg_cornered_rectangle_more"/>
+</LinearLayout>

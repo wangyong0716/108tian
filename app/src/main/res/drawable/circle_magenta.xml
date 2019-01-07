@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+
+    <solid android:color="@color/magenta"  />
+
+    <size
+        android:height="@dimen/guide_circle_diameter"
+        android:width="@dimen/guide_circle_diameter" />
+
+</shape>

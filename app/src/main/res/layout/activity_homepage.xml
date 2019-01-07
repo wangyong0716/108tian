@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="true">
+
+    <com.ksider.mobile.android.view.CustomerViewPaper
+            android:id="@+id/homePage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scrollEnable="true"
+            tools:context=".MainActivity"/>
+
+    <com.ksider.mobile.android.view.PagerSlidingTabStrip
+            android:id="@+id/homeTabs"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@color/white"
+            android:layout_gravity="bottom"
+            app:pstsShouldExpand="true"/>
+
+    <!--include layout="@layout/fragment_launch" /-->
+    <!--
+    <com.ksider.mobile.android.view.LaunchCoverView
+        android:id="@+id/coverLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+    </com.ksider.mobile.android.view.LaunchCoverView>
+    -->
+    <LinearLayout
+            android:id="@+id/home_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:background="@color/transparent_black">
+        <ImageView
+                android:id="@+id/pic"
+                android:layout_height="360dp"
+                android:layout_width="290dp"
+                android:src="@drawable/lead_01"
+                android:scaleType="centerCrop"/>
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="47dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large_size"
+                android:text="关闭"/>
+    </LinearLayout>
+</FrameLayout>

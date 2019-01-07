@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <LinearLayout
+            android:id="@+id/swipeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:background="@color/trash_background"
+            android:layout_marginLeft="@dimen/margin_left_small"
+            android:layout_marginRight="@dimen/margin_right_small"
+            android:layout_gravity="right"
+            android:gravity="right">
+        <ImageView
+                android:id="@+id/trash"
+                android:layout_width="@dimen/trash_width"
+                android:paddingLeft="@dimen/trash_icon_padding"
+                android:paddingRight="@dimen/trash_icon_padding"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_height="match_parent"
+                android:src="@drawable/trash" />
+    </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/listview_img_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@color/white"
+                      android:orientation="vertical">
+            <com.ksider.mobile.android.view.LoadImageView
+                    android:id="@+id/listview_headImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_img_height"
+                    android:background="@color/image_default_color"
+                    android:scaleType="centerCrop"/>
+            <TextView
+                    android:id="@+id/list_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/margin_right_standard"
+                    android:gravity="left|center_vertical"
+                    android:ellipsize="end"
+                    android:ems="18"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_middle_size"
+                    android:typeface="sans"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

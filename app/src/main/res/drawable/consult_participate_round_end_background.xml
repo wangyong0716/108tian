@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <stroke android:width="0dp" android:color="@color/gray_1"/>
+            <corners android:radius="@dimen/half_consult_participate_height" />
+            <solid android:color="@color/participate_background_color"/>
+        </shape>
+    </item>
+</selector>

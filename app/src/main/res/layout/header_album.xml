@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/header_container"
+    android:layout_height="@dimen/image_height" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/header_album"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:background="#4C000000" >
+
+        <com.ksider.mobile.android.view.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="8dip"
+            app:fillColor="@color/main_color"
+            app:pageColor="@color/white"
+            app:radius="4dp"
+            app:strokeWidth="0dp" />
+
+        <TextView
+            android:layout_above="@id/indicator"
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large_size"
+            android:textStyle="bold"
+            android:typeface="sans"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+</FrameLayout>

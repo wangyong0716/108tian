@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="@dimen/detail_padding_left"
+              android:paddingRight="@dimen/detail_padding_right"
+              android:paddingBottom="10dp"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <TextView
+            android:id="@+id/headline_title"
+            style="@style/detail_page_title"/>
+    <com.ksider.mobile.android.partion.MerchantInfoView
+            android:id="@+id/part_merchant_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <com.ksider.mobile.android.partion.DetailView
+            android:id="@+id/part_detail_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <include layout="@layout/partion_web_layout"/>
+    <com.ksider.mobile.android.partion.RecommendView
+            android:id="@+id/part_recommend_view"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    <com.ksider.mobile.android.partion.ShareView
+            android:id="@+id/part_share_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <com.ksider.mobile.android.partion.ConsultView
+            android:id="@+id/part_consult_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

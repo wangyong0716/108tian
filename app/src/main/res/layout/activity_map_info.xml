@@ -1,0 +1,139 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/homebackground"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="120dp"
+        android:clickable="true" />
+   	<LinearLayout
+   	    android:layout_width="match_parent"
+   	    android:layout_height="120dp"
+   	    android:layout_gravity="bottom"
+   	    android:background="@color/white"
+   	    android:gravity="bottom"
+   	    android:orientation="vertical" >
+		<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="3dp"
+            android:background="@color/divider_line_color" />
+		<RelativeLayout
+		    android:layout_width="match_parent"
+   	        android:layout_height="80dp"
+   	        android:background="@color/white">
+
+   	        <RelativeLayout
+   	            android:layout_width="wrap_content"
+   	            android:layout_height="40dp"
+   	            android:layout_alignParentTop="true"
+   	            android:layout_centerVertical="true"
+   	            android:orientation="horizontal"
+   	            android:paddingLeft="@dimen/list_item_floating_margin_left"
+   	            android:paddingRight="@dimen/list_item_floating_margin_left" >
+
+   	        <TextView
+   	            android:id="@+id/name"
+   	            android:layout_width="wrap_content"
+   	            android:layout_height="wrap_content"
+   	            android:layout_alignParentLeft="true"
+   	            android:layout_centerVertical="true"
+   	            android:gravity="left"
+   	            android:paddingTop="10dp"
+   	            android:textColor="@color/gray_tile"
+   	            android:textSize="@dimen/home_text_icon_size"
+   	            android:textStyle="bold"
+   	            android:typeface="sans" />
+
+   	        <TextView
+   	            android:id="@+id/distance"
+   	            android:layout_width="wrap_content"
+   	            android:layout_height="wrap_content"
+   	            android:layout_alignParentLeft="true"
+   	            android:layout_alignParentRight="true"
+   	            android:layout_centerVertical="true"
+   	            android:gravity="right"
+   	            android:paddingTop="10dp"
+   	            android:textColor="@color/gray_tile"
+   	            android:textSize="@dimen/home_section_tile"
+   	            android:typeface="sans" />
+
+   	        </RelativeLayout>
+
+		<TextView
+		    android:id="@+id/address"
+		    android:layout_width="wrap_content"
+		    android:layout_height="40dp"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentLeft="true"
+		    android:gravity="left|bottom"
+		    android:paddingLeft="@dimen/list_item_floating_margin_left"
+		    android:paddingBottom="@dimen/list_item_floating_margin_left"
+		    android:textColor="@color/gray_tile"
+		    android:textSize="@dimen/home_section_tile"
+		    android:typeface="sans" />
+		</RelativeLayout>
+		<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="3dp"
+            android:background="@color/divider_line_color" />
+	   <LinearLayout
+	       android:layout_width="match_parent"
+	       android:layout_height="40dp"
+	       android:layout_gravity="bottom"
+	       android:background="@color/white"
+	       android:gravity="bottom"
+	       android:orientation="horizontal">
+		<RelativeLayout
+		    android:id="@+id/router"
+		    android:layout_width="match_parent"
+   	        android:layout_height="40dp"
+   	        android:layout_weight="1">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="40dp"
+                   android:layout_centerHorizontal="true"
+                   android:layout_gravity="center_vertical"
+                   android:drawableLeft="@drawable/traffic_icon"
+                   android:drawablePadding="@dimen/icon_margin"
+                   android:gravity="left|center"
+                   android:text="查看线路"
+                   android:textColor="@color/gray_tile"
+                   android:textSize="@dimen/home_section_tile"
+                   android:typeface="sans" />
+			</RelativeLayout>
+			<View
+           	    android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider_line_color" />
+			<RelativeLayout
+		    	android:layout_width="match_parent"
+   	        	android:layout_height="40dp"
+   	        	android:layout_weight="1">
+               <TextView
+                   android:id="@+id/phone"
+                   android:layout_width="wrap_content"
+                   android:layout_height="40dp"
+                   android:layout_centerHorizontal="true"
+                   android:layout_gravity="center_vertical"
+                   android:drawableLeft="@drawable/phone_icon"
+                   android:drawablePadding="@dimen/icon_margin"
+                   android:gravity="left|center"
+                   android:text="电话"
+                   android:textColor="@color/gray_tile"
+                   android:textSize="@dimen/home_section_tile"
+                   android:typeface="sans" />
+			</RelativeLayout>
+	 </LinearLayout>
+	</LinearLayout>
+	<include layout="@layout/header_backtrack"/>
+</FrameLayout>

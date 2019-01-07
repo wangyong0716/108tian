@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="@dimen/home_section_divider_line_height"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingLeft="@dimen/header_banner_margin_left"
+        android:paddingRight="@dimen/header_banner_margin_right" >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/detail_title_color"
+            android:textSize="@dimen/home_section_tile"
+            android:typeface="sans" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/dotted" />
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/before"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/detail_text_size"
+            android:typeface="sans" />
+
+        <com.ksider.mobile.android.view.LoadImageView
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/image"
+			android:scaleType="centerCrop"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/image_height"
+			android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/after"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/detail_text_size"
+            android:typeface="sans" />
+
+    </LinearLayout>
+</LinearLayout>

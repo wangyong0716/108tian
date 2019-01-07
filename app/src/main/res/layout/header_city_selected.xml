@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="@dimen/header_banner_height"
+        android:background="@color/toolbar_background_color">
+    <TextView
+            android:id="@+id/cityName"
+            android:paddingLeft="16dp"
+            android:paddingRight="@dimen/margin_left_standard"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:drawablePadding="4dp"
+            android:text="@string/defaultCity"
+            android:drawableRight="@drawable/filter_triangle_icon"
+            android:typeface="sans"
+            android:textColor="@color/toolbar_text_color"
+            android:textSize="@dimen/text_middle_size"/>
+    <TextView
+            android:id="@+id/list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/toolbar_text_color"
+            android:textSize="@dimen/text_large_size"
+            android:typeface="sans"/>
+    <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/search_back_icon"/>
+    <View style="@style/toolbar_line"/>
+</RelativeLayout>

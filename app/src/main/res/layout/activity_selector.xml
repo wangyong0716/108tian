@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <include layout="@layout/header_backtrack"/>
+    <include layout="@layout/selector_header"
+             android:layout_height="40dp"
+             android:layout_width="match_parent"/>
+    <View style="@style/divider_line"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false">
+        <com.ksider.mobile.android.scrollListView.OverScrollPullToRefreshListView
+                android:id="@+id/content_list"
+                android:clipToPadding="false"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+        <LinearLayout
+                android:id="@+id/mask"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/transparent_black"
+                android:orientation="vertical">
+            <FrameLayout android:id="@+id/fragment_content"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content">
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

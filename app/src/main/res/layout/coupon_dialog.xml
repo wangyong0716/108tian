@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+    <com.ksider.mobile.android.view.LoadImageView
+            android:id="@+id/img"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:scaleType="centerCrop"/>
+    <TextView
+            android:id="@+id/close"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="40dp"
+            android:padding="5dp"
+            android:layout_weight="1.0"
+            android:gravity="bottom|center_horizontal"
+            android:background="@color/transparent"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large_size"
+            android:text="关闭"/>
+</LinearLayout>

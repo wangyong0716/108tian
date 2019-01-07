@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/evaluate_input_layout"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/evaluate_dialog_height"
+              android:minHeight="@dimen/evaluate_dialog_height"
+              android:paddingLeft="@dimen/consult_input_padding"
+              android:paddingRight="@dimen/consult_input_padding"
+              android:paddingTop="5dp"
+              android:paddingBottom="5dp"
+              android:background="@color/white_1"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:clickable="true">
+    <EditText
+            android:id="@+id/evaluate_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="@dimen/evaluate_edittext_height"
+            android:paddingLeft="@dimen/consult_input_padding"
+            android:paddingRight="@dimen/consult_input_padding"
+            android:gravity="left|center_vertical"
+            android:textSize="@dimen/text_middle_size"
+            android:textColorHint="@color/black_4"
+            android:textColor="@color/black_0"
+            android:hint="请输入标签，最长15个字"
+            android:maxLength="15"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:background="@drawable/consult_content_rectangle_background"/>
+</LinearLayout>
